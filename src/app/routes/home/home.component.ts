@@ -10,6 +10,7 @@ import { course } from 'src/model/course';
 export class HomeComponent implements OnInit {
 
   courselist:course[];
+  pricetype:string="All Courses";
   constructor(private cs:CourseService) { 
       this.cs.getCourses().subscribe(
        (data:course[])=>{this.courselist=data;},

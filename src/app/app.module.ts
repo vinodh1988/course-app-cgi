@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule,HttpClient} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { VirtualclassComponent } from './routes/virtualclass/virtualclass.compon
 import { ContactComponent } from './routes/contact/contact.component';
 import { OffersComponent } from './routes/offers/offers.component';
 import { CourseComponent } from './routes/home/course/course.component';
+import { OffercodePipe } from './pipes/offercode.pipe';
+import { PricefilterPipe } from './pipes/pricefilter.pipe';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { CourseComponent } from './routes/home/course/course.component';
     VirtualclassComponent,
     ContactComponent,
     OffersComponent,
-    CourseComponent
+    CourseComponent,
+    OffercodePipe,
+    PricefilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

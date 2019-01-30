@@ -1,9 +1,15 @@
+
+
 <div class="course">
-  <h3>{{current.modulename}}</h3>
+  <h3>{{current.modulename | uppercase}}</h3>
   <div class="image">
     <img src="http://localhost:8894/rest-api/images/{{current.filename}}">
   </div>
   <h5>{{current.description}}</h5>
-  <h5 class="price">Price:: {{current.price}}</h5>
+  <h5 class="price">Price:: {{current.price | currency: 'INR'}}</h5>
+  <h5 [style.color]="'lightblue'" [style.backgroundColor]="'gray'">
+    <span [style.color]="'white'">Offercode:</span>
+    {{current.modulename |offercode:current.price}}
+  </h5>
   <h6>Duration::{{current.duration}}</h6>
 </div>
