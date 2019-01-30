@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { course } from 'src/model/course';
 
 
@@ -8,7 +8,7 @@ import { course } from 'src/model/course';
   styleUrls: ['./course.component.css']
 })
 export class CourseComponent implements OnInit {
-    current:course;
+   @Input('course') current:course;
 
   constructor() { }
 

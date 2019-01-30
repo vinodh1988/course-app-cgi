@@ -1,5 +1,5 @@
 .course{
-    background-color: white;
+    background-color: rgb(235, 230, 230);
     width: 300px;
     min-height: 450px;
     margin: 20px;
@@ -18,7 +18,7 @@ h3{
     text-align: center;
 }
 
-#image img{
+.image img{
     height: 95%;
     width: 95%;
     margin: 10px;
