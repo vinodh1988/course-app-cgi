@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule,HttpClient} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { NewcoursesComponent } from './routes/newcourses/newcourses.component';
 import { VirtualclassComponent } from './routes/virtualclass/virtualclass.component';
 import { ContactComponent } from './routes/contact/contact.component';
 import { OffersComponent } from './routes/offers/offers.component';
+import { CourseComponent } from './routes/home/course/course.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { OffersComponent } from './routes/offers/offers.component';
     NewcoursesComponent,
     VirtualclassComponent,
     ContactComponent,
-    OffersComponent
+    OffersComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
