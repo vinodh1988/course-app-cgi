@@ -1,0 +1,5 @@
+.main-area{
+    width: 80%;
+    min-height: 500px;
+    border: 2px solid black;
+}
