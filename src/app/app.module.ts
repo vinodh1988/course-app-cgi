@@ -17,6 +17,7 @@ import { OffercodePipe } from './pipes/offercode.pipe';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { LoginComponent } from './login/login.component';
 import { ReviewComponent } from './routes/reviews/review/review.component';
+import { CourseContentComponent } from './routes/home/course-content/course-content.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReviewComponent } from './routes/reviews/review/review.component';
     OffercodePipe,
     PricefilterPipe,
     LoginComponent,
-    ReviewComponent
+    ReviewComponent,
+    CourseContentComponent
   ],
   imports: [
     BrowserModule,
