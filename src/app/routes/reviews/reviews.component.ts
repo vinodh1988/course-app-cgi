@@ -41,6 +41,24 @@ courses:string[]=["Java","HTML","CSS3","Angular","React JS"];
              
   }
 
+  saveReview(){
+      let token=localStorage.getItem('token');
+      var temp:any={
+        name: this.reviewForm.value.name,
+        email: this.reviewForm.value.email,
+        course:this.reviewForm.value.course,
+        message:this.reviewForm.value.message,
+        reviewdate:new Date().toString()
+      }
+      this.rs.postReviews(temp,token).subscribe(
+        data=>{
+          alert('Your review is saved')
+          location.reload();
+        },
+        (error)=>alert('Not saved ---some Error')
+      )
+
+  }
 
 
 }
