@@ -23,4 +23,10 @@
       <a class="nav-link" routerLink="/offers">Offers</a>
     </li>
   </ul>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li><a class="nav-link" href="#" (click)="showlogin()">Login</a></li>
+</ul>
 </nav>
+
+<app-login *ngIf="visibility"></app-login>

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menubar.component.css']
 })
 export class MenubarComponent implements OnInit {
-
+visibility:boolean=false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showlogin(){
+    this.visibility=this.visibility?false:true;
   }
 
 }

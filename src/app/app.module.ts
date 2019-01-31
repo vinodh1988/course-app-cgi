@@ -15,6 +15,7 @@ import { OffersComponent } from './routes/offers/offers.component';
 import { CourseComponent } from './routes/home/course/course.component';
 import { OffercodePipe } from './pipes/offercode.pipe';
 import { PricefilterPipe } from './pipes/pricefilter.pipe';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PricefilterPipe } from './pipes/pricefilter.pipe';
     OffersComponent,
     CourseComponent,
     OffercodePipe,
-    PricefilterPipe
+    PricefilterPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
