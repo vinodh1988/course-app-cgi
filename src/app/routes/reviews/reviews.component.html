@@ -2,5 +2,7 @@
     <h3>You need to Login to view The reviews</h3>
 </div>
 <div  *ngIf="!visibility">
-     Reviews Details will be shown here...!!!!!
+     <h3>Reviews</h3>
+     <hr>
+     <app-review *ngFor="let x of reviews" [current]="x"></app-review>
 </div>
