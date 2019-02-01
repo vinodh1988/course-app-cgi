@@ -1,4 +1,4 @@
-import {subtopic} from './suptopic';
+import {subtopic} from './subtopic';
 
 export interface topic{
  topic_id:number;
