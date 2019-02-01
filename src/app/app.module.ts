@@ -20,6 +20,7 @@ import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { LoginComponent } from './login/login.component';
 import { ReviewComponent } from './routes/reviews/review/review.component';
 import { CourseContentComponent } from './routes/home/course-content/course-content.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -40,7 +41,8 @@ export function createTranslateLoader(http: HttpClient) {
     PricefilterPipe,
     LoginComponent,
     ReviewComponent,
-    CourseContentComponent
+    CourseContentComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

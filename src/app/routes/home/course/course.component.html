@@ -1,6 +1,6 @@
 
 <a routerLink="/ccontent/{{current.modulecode}}">
-<div class="course">
+<div class="course" [highlight]="current.price" >
   <h3>{{current.modulename | uppercase}}</h3>
   <div class="image">
     <img src="http://localhost:8894/rest-api/images/{{current.filename}}">
