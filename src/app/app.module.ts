@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule,HttpClient} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,10 @@ import { PricefilterPipe } from './pipes/pricefilter.pipe';
 import { LoginComponent } from './login/login.component';
 import { ReviewComponent } from './routes/reviews/review/review.component';
 import { CourseContentComponent } from './routes/home/course-content/course-content.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -41,7 +47,14 @@ import { CourseContentComponent } from './routes/home/course-content/course-cont
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
