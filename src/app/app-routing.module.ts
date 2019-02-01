@@ -15,8 +15,11 @@ const routes: Routes = [
   {path:"vclasses",component:VirtualclassComponent},
   {path:"offers",component:OffersComponent},
   {path:"newcourses",component:NewcoursesComponent},
-  {path:"ccontent/:mcode",component: CourseContentComponent }
+  {path:"ccontent/:mcode",component: CourseContentComponent },
+  {path:"sroutes",loadChildren:"./second/second.module#SecondModule"}
+
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
